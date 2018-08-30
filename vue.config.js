@@ -1,9 +1,11 @@
+const connect = require('./src/api/connect');
+
 module.exports = {
   devServer: {
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://fagao.chinabyte.com/index.php',
+        target: connect.path,
         changeOrigin: true,
       },
     },

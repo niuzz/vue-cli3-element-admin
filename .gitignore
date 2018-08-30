@@ -1,5 +1,7 @@
 .DS_Store
 node_modules
+/src/api/connect.js
+
 /dist
 
 /tests/e2e/videos/
