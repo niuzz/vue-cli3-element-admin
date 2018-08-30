@@ -1,7 +1,7 @@
-<!-- user -->
+<!-- admin index -->
 <template>
   <div class='wrap'>
-    user
+    admin index
     <router-view />
   </div>
 </template>

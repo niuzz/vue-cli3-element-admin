@@ -1,8 +1,7 @@
-<!-- user -->
+<!-- admin A1 -->
 <template>
   <div class='wrap'>
-    user
-    <router-view />
+      admin A1
   </div>
 </template>
 

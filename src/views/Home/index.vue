@@ -1,8 +1,7 @@
-<!-- user -->
+<!-- home -->
 <template>
   <div class='wrap'>
-    user
-    <router-view />
+      home
   </div>
 </template>
 
