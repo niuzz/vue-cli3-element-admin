@@ -1,14 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import permission from './permission';
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     user: {},
-    auth: '',
+    auth: sessionStorage.getItem('Auth'),
   },
   mutations: {
     SET_USER: (state, user) => {
@@ -25,7 +23,8 @@ export default new Vuex.Store({
       sessionStorage.setItem('Auth', 'user');
     },
   },
-  modules: {
-    permission,
+  getters: {
+    asyncRoutes: state => state.permission.asyncRoutes,
+    routers: state => state.permission.routers,
   },
 });
