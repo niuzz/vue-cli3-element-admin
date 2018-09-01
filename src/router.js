@@ -27,7 +27,7 @@ export const asynchronousRoute = [
     name: 'user',
     component: User,
     meta: {
-      auth: ['user'],
+      roles: ['user'],
     },
     children: [
       {
@@ -35,7 +35,7 @@ export const asynchronousRoute = [
         name: 'user-p1',
         component: () => import('@/views/User/P1'),
         meta: {
-          auth: ['user'],
+          roles: ['user'],
         },
       },
       {
@@ -43,7 +43,7 @@ export const asynchronousRoute = [
         name: 'user-p2',
         component: () => import('@/views/User/P2'),
         meta: {
-          auth: ['user'],
+          roles: ['user'],
         },
       },
     ],
@@ -53,7 +53,7 @@ export const asynchronousRoute = [
     name: 'admin',
     component: Admin,
     meta: {
-      auth: ['admin'],
+      roles: ['admin'],
     },
     children: [
       {
@@ -61,13 +61,14 @@ export const asynchronousRoute = [
         name: 'admin-a1',
         component: () => import('@/views/Admin/A1'),
         meta: {
-          auth: ['admin'],
+          roles: ['admin'],
         },
       },
     ],
   },
 ];
 
+
 export default new Router({
-  routes: synchronousRoute.concat(asynchronousRoute),
+  routes: synchronousRoute,
 });
