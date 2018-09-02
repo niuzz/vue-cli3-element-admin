@@ -12,6 +12,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.6",
+    "eslint-plugin-vue": "^4.7.1",
+    "font-awesome": "^4.7.0",
     "nprogress": "^0.2.0",
     "qs": "^6.5.2",
     "vue": "^2.5.17",

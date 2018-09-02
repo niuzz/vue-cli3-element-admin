@@ -2,13 +2,14 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/Login/index.vue';
 
-import User from './views/User/index.vue';
-import Admin from './views/Admin/index.vue';
+import Layout from './views/Layout/Layout.vue';
+// import Admin from './views/Admin/index.vue';
 import Home from './views/Home/index.vue';
+import HomeLayout from './views/Layout/HomeLayout.vue';
 
 Vue.use(Router);
 
-export const synchronousRoute = [
+export const routes = [
   {
     path: '/login',
     name: 'login',
@@ -19,13 +20,10 @@ export const synchronousRoute = [
     name: 'home',
     component: Home,
   },
-];
-
-export const asynchronousRoute = [
   {
     path: '/user',
     name: 'user',
-    component: User,
+    component: Layout,
     meta: {
       roles: ['user'],
     },
@@ -51,7 +49,7 @@ export const asynchronousRoute = [
   {
     path: '/admin',
     name: 'admin',
-    component: Admin,
+    component: HomeLayout,
     meta: {
       roles: ['admin'],
     },
@@ -70,5 +68,5 @@ export const asynchronousRoute = [
 
 
 export default new Router({
-  routes: synchronousRoute,
+  routes,
 });

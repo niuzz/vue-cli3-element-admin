@@ -1,7 +1,7 @@
 <!-- login -->
 <template>
   <div class='wrap'>
-      <el-input v-model="username" placeholder="xx"/>
+          <el-input v-model="username" placeholder="xx"/>
       <el-input v-model="password" placeholder="xx"/>
       <el-button type="primary" @click="submit">submit</el-button>
   </div>
@@ -34,6 +34,7 @@ export default {
           if (code === 1000) {
             const user = res.data.data;
             this.$store.dispatch('SetUser', user);
+            this.$router.push('/user/p1');
           }
         });
     },

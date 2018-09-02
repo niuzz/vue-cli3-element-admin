@@ -7,11 +7,11 @@ router.beforeEach((to, form, next) => {
     store.dispatch('permission/GenerateRoutes', { roles }).then(() => { // 根据roles权限生成可访问的路由表
       if (store.getters.roles.length === 0) {
         router.addRoutes(store.getters.addRouters); // 动态添加可访问路由表
+        console.log(router.options.routes);
         next({ ...to, replace: true });
-        console.log(store.getters.roles);
       } else {
-        console.log(store.getters.routers);
-        next();
+        console.log(router.options.routes);
+        next({ ...to, replace: true });
       }
     });
   } else {
